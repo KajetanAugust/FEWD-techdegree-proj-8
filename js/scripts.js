@@ -2,13 +2,13 @@
 const cardsDiv = document.getElementById('employees');
 
 
-const characters = [];
 
-   charaters = fetch('https://swapi.co/api/people/')
+
+const characters = fetch('https://fsjs-public-api-backup.herokuapp.com/api')
     .then(res => res.json())
-    .then(data => console.log(data));
 
 
-// let bigNames = characters.map(character => character.name.toUpperCase());
-//
-console.log(characters);
+
+
+let bigFirst = characters.map( character => character.email.toUpperCase());
+console.log(bigFirst);
