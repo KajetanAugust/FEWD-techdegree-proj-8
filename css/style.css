@@ -1,0 +1,80 @@
+/*////////////////*/
+/*//// GLOBAL ////*/
+/*////////////////*/
+
+* {
+    font-family: 'Noto Sans', sans-serif;
+}
+
+/*////////////////*/
+/*//// HEADER ////*/
+/*////////////////*/
+
+header {
+    background-color: lightslategray;
+}
+
+header div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    padding-bottom: 30px;
+    margin: auto auto;
+}
+
+h1 {
+    font-weight: 400;
+    color: white;
+}
+
+header input {
+    width: 60%;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid lightslategray;
+    padding-left: 10px;
+    background-color: aliceblue;
+}
+
+/*////////////////*/
+/*///// MAIN /////*/
+/*////////////////*/
+
+main {
+    width: 95%;
+
+}
+
+#employees {
+    display: flex;
+    flex-direction: column;
+}
+
+/*/////////////////////*/
+/*//// MEDIA QUERY ////*/
+/*/////////////////////*/
+
+@media screen and (min-width: 768px ) {
+    header div {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 30px 30px 30px 30px;
+        width: 90%;
+    }
+
+    header input {
+        width: 30%;
+    }
+
+    main {
+        width: 85%;
+    }
+
+    #employees {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
