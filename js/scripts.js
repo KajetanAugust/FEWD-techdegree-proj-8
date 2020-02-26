@@ -4,11 +4,11 @@ const cardsDiv = document.getElementById('employees');
 
 
 
-const characters = fetch('https://fsjs-public-api-backup.herokuapp.com/api')
+fetch('https://fsjs-public-api-backup.herokuapp.com/api')
     .then(res => res.json())
+    .then(data  => {
+        Object.values(data);
+        console.log(data);
+    });
 
 
-
-
-let bigFirst = characters.map( character => character.email.toUpperCase());
-console.log(bigFirst);
