@@ -3,7 +3,7 @@ const cardsDiv = document.getElementById('employees');
 
 let users;
 
-fetch('https://randomuser.me/api/?results=12')
+fetch('https://randomuser.me/api/?results=12&nat=us')
     .then(res => res.json())
     .then(data  => {
         users = (Object.values(data));
@@ -16,10 +16,14 @@ function creatingUser(data) {
         const userDiv = document.createElement('div');
         cardsDiv.appendChild(userDiv);
         userDiv.innerHTML = `
+        <div class="photo">
         <img src=${person.picture.large} alt="profile picture">
-        <span>${person.name.first} ${person.name.last}</span>
-        <p>${person.email}</p>
-        <p>${person.location.city}</p>
+        </div>
+        <div class="info">
+        <h3 class="name">${person.name.first} ${person.name.last}</h3>
+        <p class="email">${person.email}</p>
+        <p class="city">${person.location.city}</p>
+        </div>
         `;
         userDiv.className = 'user';
     });
