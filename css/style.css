@@ -43,7 +43,6 @@ header input {
 
 main {
     width: 95%;
-
 }
 
 #employees {
@@ -71,9 +70,10 @@ main {
     margin: 15px 15px;
 }
 
-/*.user:hover {*/
-/*    */
-/*}*/
+.user:hover {
+    background-color: aqua;
+    transition: background-color 1s ease-out;
+}
 
 .user img {
     border-radius: 50%;
@@ -83,9 +83,6 @@ main {
     padding-left: 20px;
 }
 
-.info a:first-child {
-    font-size: 0.5rem;
-}
 
 
 /*/////////////////////*/
