@@ -83,7 +83,7 @@ header input {
 }
 
 .info {
-    /*padding-left: 20px;*/
+
     word-wrap: break-word;
     overflow-wrap: break-word;
     display:flex;
@@ -105,17 +105,12 @@ header input {
 .city{
     margin-top: 5px;
     margin-bottom: 5px;
-    /*align-self: flex-start;*/
-    /*justify-self:flex-start ;*/
-}
 
+}
 
 /*/////////////////////*/
 /*//// MEDIA QUERY ////*/
 /*/////////////////////*/
-
-
-
 
 @media screen and (min-width: 768px ) {
     header div {
