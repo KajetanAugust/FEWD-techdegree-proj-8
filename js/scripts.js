@@ -45,14 +45,14 @@ function creatingUser(data) {
 //// SEARCH FUNCTIONALITY ////
 //////////////////////////////
 
-searchBar.addEventListener('keyup', ()=>{
+searchBar.addEventListener('keyup', () => {
     const searchVal = searchBar.value.toLowerCase();
 
-    for(i=0; i<searchPersons.length; i++){
+    for (i = 0; i < searchPersons.length; i++) {
         const persons = searchPersons[i].textContent.toLowerCase();
-        if(persons.includes(searchVal) != true){
+        if (persons.includes(searchVal) != true) {
             searchPersons[i].parentNode.parentNode.style.display = 'none';
-        }else {
+        } else {
             searchPersons[i].parentNode.parentNode.style.display = '';
         }
     }
