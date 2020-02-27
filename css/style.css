@@ -41,9 +41,6 @@ header input {
 /*///// MAIN /////*/
 /*////////////////*/
 
-main {
-    width: 95%;
-}
 
 #employees {
     display: flex;
@@ -62,12 +59,15 @@ main {
     justify-self: center;
     width: 90%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
     flex-wrap: wrap;
     border: 1px solid lightgrey;
     border-radius: 5px;
     padding: 15px 15px;
     margin: 15px 15px;
+
 }
 
 .user:hover {
@@ -77,16 +77,45 @@ main {
 
 .user img {
     border-radius: 50%;
+    justify-self: center;
+    align-self: center;
+    margin:auto auto;
 }
 
 .info {
-    padding-left: 20px;
+    /*padding-left: 20px;*/
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    display:flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
+
+.name {
+    margin-bottom:5px ;
+}
+
+.email {
+    word-wrap: break-word;
+    margin: 5px auto;
+
+}
+
+.city{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    /*align-self: flex-start;*/
+    /*justify-self:flex-start ;*/
 }
 
 
 /*/////////////////////*/
 /*//// MEDIA QUERY ////*/
 /*/////////////////////*/
+
+
+
 
 @media screen and (min-width: 768px ) {
     header div {
@@ -110,8 +139,55 @@ main {
         flex-wrap: wrap;
     }
 
-    /*.user {*/
-    /*    width: %;*/
-    /*}*/
+    .user {
+        align-self: center;
+        justify-self: center;
+        width: 40%;
+        display: flex;
+        flex-direction: row;
+        justify-items: center;
+        align-items: center;
+        flex-wrap: wrap;
+        border: 1px solid lightgrey;
+        border-radius: 5px;
+        padding: 15px 15px;
+        margin: 15px 15px;
+    }
+
+    .user img {
+        height: 60px;
+    }
+
+    .info {
+        padding-left: 20px;
+        justify-items: flex-start;
+        align-items: flex-start;
+        align-self: center;
+    }
+
+    .city{
+
+        align-self: flex-start;
+        justify-self:flex-start ;
+    }
 }
 
+@media screen and (min-width: 1024px ) {
+
+    .user {
+        align-self: center;
+        justify-self: center;
+        width: 30%;
+        display: flex;
+        flex-direction: row;
+        justify-items: center;
+        align-items: center;
+        flex-wrap: wrap;
+        border: 1px solid lightgrey;
+        border-radius: 5px;
+        padding: 15px 15px;
+        margin: 15px 15px;
+    }
+
+
+}
