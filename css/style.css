@@ -11,7 +11,9 @@
 /*////////////////*/
 
 header {
-    background-color: lightslategray;
+    background-color: rgb(0,102,153);
+    position: sticky;
+    top:0;
 }
 
 header div {
@@ -21,6 +23,7 @@ header div {
     justify-items: center;
     padding-bottom: 30px;
     margin: auto auto;
+
 }
 
 h1 {
@@ -32,9 +35,18 @@ header input {
     width: 60%;
     height: 30px;
     border-radius: 5px;
-    border: 1px solid lightslategray;
+    border: 2px solid white;
     padding-left: 10px;
-    background-color: aliceblue;
+    background-color: rgb(0,102,153);
+    padding-top:5px;
+    padding-bottom: 5px;
+    color:white;
+}
+
+header input::placeholder {
+    padding: 2px 0;
+    margin:auto auto;
+    color:white;
 }
 
 /*////////////////*/
@@ -71,7 +83,7 @@ header input {
 }
 
 .user:hover {
-    background-color: cyan;
+    background-color: rgba(0,102,153, 0.1);
     transition: background-color 1s ease-out;
 }
 
@@ -79,9 +91,9 @@ header input {
     border-radius: 50%;
     justify-self: center;
     align-self: center;
-    margin: auto auto;
+
     height: 90px;
-    padding-bottom: 15px;
+    margin-bottom: 15px;
 }
 
 .info {
@@ -112,6 +124,16 @@ header input {
 }
 
 /*/////////////////////*/
+/*/////// MODAL ///////*/
+/*/////////////////////*/
+
+
+#modal {
+    position:fixed;
+    display: none;
+}
+
+/*/////////////////////*/
 /*//// MEDIA QUERY ////*/
 /*/////////////////////*/
 
@@ -123,10 +145,14 @@ header input {
         width: 90%;
     }
 
+    header div {
+        height: 90px;
+        padding: initial;
+    }
+
     header input {
         width: 30%;
     }
-
 
     #employees {
         display: flex;
@@ -149,6 +175,7 @@ header input {
     .user img {
         height: 90px;
         padding-bottom: initial;
+        margin: auto auto;
     }
 
     .info {
@@ -179,7 +206,6 @@ header input {
         width: 350px;
         display: flex;
         flex-direction: row;
-
     }
 
     .email {
