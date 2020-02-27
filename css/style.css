@@ -128,16 +128,19 @@ header input::placeholder {
 /*/////// MODAL ///////*/
 /*/////////////////////*/
 
+#modal,
+#modal-background {
+    display: none;
+}
 
 #modal {
     position:fixed;
     z-index: 999;
     top:50%;
     left:50%;
-    display: none;
     width:90%;
     max-width: 450px;
-    height: 60%;
+    height: 500px;
     background-color: white;
     border-radius: 5px;
     border: lightgrey 1px solid;
@@ -151,7 +154,46 @@ header input::placeholder {
     background-color: rgba(0,0,0, 0.8);
     width:100%;
     height: 100%;
-    display: none;
+}
+
+.closing-modal {
+    position: fixed;
+    top:2%;
+    left:95%;
+    margin:5px 5px;
+    font-size: x-large;
+    padding:1px 10px 5px 10px;
+    border-radius: 5px;
+    transform: translate(-50%, -50%);
+}
+
+.closing-modal:hover {
+    background-color: rgba(0,102,153, 0.5);
+    color:white;
+}
+
+.arrow {
+    height: 40px;
+    position: fixed;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+}
+
+.arrow:hover {
+    background-color: rgba(0,102,153, 0.5);
+}
+
+.modal-arrow-right {
+    left: 95%;
+    top:50%;
+    transform: translate(-50%, -50%);
+}
+
+.modal-arrow-left{
+    left: 5%;
+    top: 50%;
+    transform: rotate(180deg) translate(50%, 50%);
 }
 
 /*/////////////////////*/
@@ -222,6 +264,7 @@ header input::placeholder {
     #modal{
         width: 50%;
         max-width: 450px;
+        height: 600px;
     }
 }
 

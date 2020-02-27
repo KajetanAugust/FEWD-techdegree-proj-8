@@ -2,6 +2,11 @@ const cardsDiv = document.getElementById('employees');
 const searchBar = document.getElementById('searchBar');
 const searchPersons = document.getElementsByClassName('name');
 const userCards = document.getElementsByClassName('user');
+const modalWindow = document.getElementById('modal');
+const modalBackground = document.getElementById('modal-background');
+const modalClosingX = document.getElementById('closing-modal');
+const modalArrowRight = document.getElementById('modal-arrow-right');
+const modalArrowLeft =document.getElementById('modal-arrow-left');
 let users;
 
 ///////////////
@@ -57,3 +62,23 @@ searchBar.addEventListener('keyup', () => {
         }
     }
 });
+
+//////////////////////////////
+//// MODAL FUNCTIONALITY /////
+//////////////////////////////
+
+    cardsDiv.addEventListener('click', () => {
+        modalWindow.style.display = 'initial';
+        modalWindow.classList.add('visible');
+        modalBackground.style.display = 'initial';
+        modalBackground.classList.add('visible')
+    });
+
+    if(modalBackground.className === 'visible') {
+        modalClosingX.addEventListener('click', () => {
+            modalWindow.style.display = 'none';
+            modalWindow.classList.remove('visible');
+            modalBackground.style.display = 'none';
+            modalBackground.classList.remove('visible');
+        });
+    }
