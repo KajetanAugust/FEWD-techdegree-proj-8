@@ -1,6 +1,9 @@
 const cardsDiv = document.getElementById('employees');
-
 let users;
+
+///////////////
+//// FETCH ////
+///////////////
 
 fetch('https://randomuser.me/api/?results=12&nat=us')
     .then(res => res.json())
@@ -9,6 +12,9 @@ fetch('https://randomuser.me/api/?results=12&nat=us')
         creatingUser(Object.values(data));
     });
 
+////////////////////////////
+//// CREATING USER DIVs ////
+////////////////////////////
 
 function creatingUser(data) {
     data[0].map(person => {
@@ -29,3 +35,7 @@ function creatingUser(data) {
         userDiv.className = 'user';
     });
 }
+
+//////////////////////////////
+//// SEARCH FUNCTIONALITY ////
+//////////////////////////////

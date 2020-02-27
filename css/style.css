@@ -71,7 +71,7 @@ header input {
 }
 
 .user:hover {
-    background-color: aqua;
+    background-color: cyan;
     transition: background-color 1s ease-out;
 }
 
@@ -79,21 +79,24 @@ header input {
     border-radius: 50%;
     justify-self: center;
     align-self: center;
-    margin:auto auto;
+    margin: auto auto;
+    height: 90px;
+    padding-bottom: 15px;
 }
 
 .info {
 
     word-wrap: break-word;
     overflow-wrap: break-word;
-    display:flex;
+    display: flex;
     flex-direction: column;
     justify-items: center;
     align-items: center;
 }
 
 .name {
-    margin-bottom:5px ;
+    margin-bottom: 5px;
+    margin-top: 5px;
 }
 
 .email {
@@ -102,7 +105,7 @@ header input {
 
 }
 
-.city{
+.city {
     margin-top: 5px;
     margin-bottom: 5px;
 
@@ -124,33 +127,28 @@ header input {
         width: 30%;
     }
 
-    main {
-        width: 85%;
-    }
 
     #employees {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+        align-items: center;
+        justify-items: center;
+        justify-content: center;
+        margin: auto auto;
     }
 
     .user {
-        align-self: center;
-        justify-self: center;
-        width: 40%;
+        width: 340px;
         display: flex;
         flex-direction: row;
         justify-items: center;
         align-items: center;
-        flex-wrap: wrap;
-        border: 1px solid lightgrey;
-        border-radius: 5px;
-        padding: 15px 15px;
-        margin: 15px 15px;
     }
 
     .user img {
-        height: 60px;
+        height: 90px;
+        padding-bottom: initial;
     }
 
     .info {
@@ -160,10 +158,16 @@ header input {
         align-self: center;
     }
 
-    .city{
+    .city {
 
         align-self: flex-start;
-        justify-self:flex-start ;
+        justify-self: flex-start;
+    }
+
+    .email {
+        font-size: 0.8rem;
+        word-break: break-all;
+        white-space: normal;
     }
 }
 
@@ -172,16 +176,14 @@ header input {
     .user {
         align-self: center;
         justify-self: center;
-        width: 30%;
+        width: 350px;
         display: flex;
         flex-direction: row;
-        justify-items: center;
-        align-items: center;
-        flex-wrap: wrap;
-        border: 1px solid lightgrey;
-        border-radius: 5px;
-        padding: 15px 15px;
-        margin: 15px 15px;
+
+    }
+
+    .email {
+        font-size: 0.8rem;
     }
 
 
