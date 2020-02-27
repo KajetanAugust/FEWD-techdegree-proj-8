@@ -50,8 +50,8 @@ function creatingUser(data) {
 //// CREATING MODAL ////
 ////////////////////////
 
-function creatingModal(data) {
-    data[0].map(person => {
+function creatingModal() {
+    users[0].map(person => {
         const modalWindow = document.createElement('div');
         cardsDiv.appendChild(modalWindow);
         modalWindow.innerHTML = `
@@ -105,7 +105,8 @@ searchBar.addEventListener('keyup', () => {
         modalWindow.style.display = 'initial';
         modalWindow.classList.add('visible');
         modalBackground.style.display = 'initial';
-        modalBackground.classList.add('visible')
+        modalBackground.classList.add('visible');
+        creatingModal();
     });
 
 
