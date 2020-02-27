@@ -1,4 +1,7 @@
 const cardsDiv = document.getElementById('employees');
+const searchBar = document.getElementById('searchBar');
+const searchPersons = document.getElementsByClassName('name');
+const userCards = document.getElementsByClassName('user');
 let users;
 
 ///////////////
@@ -33,9 +36,24 @@ function creatingUser(data) {
         </div>
         `;
         userDiv.className = 'user';
+        userDiv.classList.add(`${person.name.first}`);
+        userDiv.classList.add(`${person.name.last}`);
     });
 }
 
 //////////////////////////////
 //// SEARCH FUNCTIONALITY ////
 //////////////////////////////
+
+searchBar.addEventListener('keyup', ()=>{
+    const searchVal = searchBar.value.toLowerCase();
+
+    for(i=0; i<searchPersons.length; i++){
+        const persons = searchPersons[i].textContent.toLowerCase();
+        if(persons.includes(searchVal) != true){
+            searchPersons[i].parentNode.parentNode.style.display = 'none';
+        }else {
+            searchPersons[i].parentNode.parentNode.style.display = '';
+        }
+    }
+});
