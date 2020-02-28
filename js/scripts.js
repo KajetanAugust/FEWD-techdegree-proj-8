@@ -51,7 +51,7 @@ function creatingUser(data) {
 
 function creatingModal() {
 
-        modalWindow.innerHTML = `
+    modalWindow.innerHTML = `
 
         <p id="closing-modal">x</p>
         <img src="icons/arrow.svg" id="modal-arrow-right" class="arrow modal-arrow-right" alt="arrow" width="40" height="40">
@@ -73,6 +73,7 @@ function creatingModal() {
 
         </div>
         `;
+
     switchingUsers();
 }
 
@@ -85,7 +86,7 @@ searchBar.addEventListener('keyup', () => {
 
     for (i = 0; i < searchPersons.length; i++) {
         const persons = searchPersons[i].textContent.toLowerCase();
-        if (persons.includes(searchVal) != true) {
+        if (persons.includes(searchVal) !== true) {
             searchPersons[i].parentNode.parentNode.style.display = 'none';
         } else {
             searchPersons[i].parentNode.parentNode.style.display = '';
@@ -105,13 +106,10 @@ searchBar.addEventListener('keyup', () => {
         const selected = e.target;
         selectedUserIndex = selected.getAttribute('class')[0];
         creatingModal();
-
         closingModal();
         console.log(selectedUserIndex);
 
     });
-
-
 
     function closingModal() {
         let modalClosingX = document.getElementById('closing-modal');
@@ -129,13 +127,25 @@ searchBar.addEventListener('keyup', () => {
         const modalArrowLeft = document.getElementById('modal-arrow-left');
 
         modalArrowRight.addEventListener('click', () =>{
-            selectedUserIndex++;
+            if(selectedUserIndex < users[0].length -1) {
+                selectedUserIndex++;
+            }else{
+                selectedUserIndex = 0;
+            }
+            console.log(selectedUserIndex);
+
             creatingModal();
             closingModal();
         });
 
         modalArrowLeft.addEventListener('click', () =>{
-            selectedUserIndex--;
+            if(selectedUserIndex != 0) {
+                selectedUserIndex--;
+            }else{
+                selectedUserIndex = 11;
+            }
+            console.log(selectedUserIndex);
+
             creatingModal();
             closingModal();
         });
