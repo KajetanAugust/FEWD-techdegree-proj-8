@@ -70,7 +70,7 @@ function creatingModal() {
         <div class="modal-additional-info">
         <p class="modal-phone">${users[0][selectedUserIndex].cell}</p>
         <p class="modal-adress">${users[0][selectedUserIndex].location.street.number} ${users[0][selectedUserIndex].location.street.name}, ${users[0][selectedUserIndex].location.state} ${users[0][selectedUserIndex].location.postcode}</p>
-
+        <p class="modal-birthday">Birthday: ${users[0][selectedUserIndex].dob.date.substr(8,2)}/${users[0][selectedUserIndex].dob.date.substr(5,2)}/${users[0][selectedUserIndex].dob.date.substr(0,4)}</p>
         </div>
         `;
 

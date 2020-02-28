@@ -166,6 +166,7 @@ header input::placeholder {
 }
 .modal-info {
     border-bottom: 1px solid lightgrey;
+    width:80%;
 }
 
 .modal-info p,
@@ -179,8 +180,13 @@ header input::placeholder {
     padding-bottom: 30px;
 }
 
-.modal-additional-info p:last-child {
+.modal-additional-info,
+.modal-info p{
     font-size: 0.9rem;
+}
+
+.modal-adress {
+    font-size:0.8rem;
 }
 
 #modal-background {
@@ -302,6 +308,10 @@ header input::placeholder {
         max-width: 300px;
         height: 400px;
         padding:50px 40px;
+    }
+
+    .modal-adress {
+        font-size:0.9rem;
     }
 }
 
