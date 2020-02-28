@@ -192,18 +192,18 @@ header input::placeholder {
     height: 100%;
 }
 
-.closing-modal {
+#closing-modal {
     position: fixed;
     top:2%;
     left:95%;
-    margin:5px 5px;
+    margin:7px 2px;
     font-size: x-large;
     padding:1px 10px 5px 10px;
     border-radius: 5px;
     transform: translate(-50%, -50%);
 }
 
-.closing-modal:hover {
+#closing-modal:hover {
     background-color: rgba(0,102,153, 0.5);
     color:white;
 }

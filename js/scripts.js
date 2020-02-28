@@ -4,7 +4,7 @@ const searchPersons = document.getElementsByClassName('name');
 const userCards = document.getElementsByClassName('user');
 const modalWindow = document.getElementById('modal');
 const modalBackground = document.getElementById('modal-background');
-const modalClosingX = document.getElementById('closing-modal');
+
 const modalArrowRight = document.getElementById('modal-arrow-right');
 const modalArrowLeft = document.getElementById('modal-arrow-left');
 let users;
@@ -85,7 +85,7 @@ function creatingModal() {
 
         modalWindow.innerHTML = `
 
-        <p class="closing-modal">x</p>
+        <p id="closing-modal">x</p>
         <img src="icons/arrow.svg" id="modal-arrow-right" class="arrow modal-arrow-right" alt="arrow" width="40" height="40">
         <img src="icons/arrow.svg" id="modal-arrow-left" class="arrow modal-arrow-left" alt="arrow" width="40" height="40">
 
@@ -138,19 +138,19 @@ searchBar.addEventListener('keyup', () => {
         const selectedClass = selected.getAttribute('class')[0];
         selectedUserIndex = selectedClass;
         creatingModal();
+        closingModal();
         console.log(selectedUserIndex);
 
     });
 
 
-    //NIE DZIAŁA
-    //NIE DZIAŁA
 
-    // if(modalBackground.className === 'visible') {
-    //     modalClosingX.addEventListener('click', () => {
-    //         modalWindow.style.display = 'none';
-    //         modalWindow.classList.remove('visible');
-    //         modalBackground.style.display = 'none';
-    //         modalBackground.classList.remove('visible');
-    //     });
-    // }
+    function closingModal() {
+        let modalClosingX = document.getElementById('closing-modal');
+        modalClosingX.addEventListener('click', () => {
+            modalWindow.style.display = 'none';
+            modalWindow.classList.remove('visible');
+            modalBackground.style.display = 'none';
+            modalBackground.classList.remove('visible');
+    });
+    }
