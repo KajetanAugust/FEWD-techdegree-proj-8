@@ -105,7 +105,7 @@ cardsDiv.addEventListener('click', (e) => {
     modalBackground.style.display = 'initial';
     modalBackground.classList.add('visible');
     const selected = e.target;
-    selectedUserIndex = selected.getAttribute('class')[0];
+    selectedUserIndex = parseInt(selected.getAttribute('class').substr(0,2));
     creatingModal();
     closingModal();
     console.log(selectedUserIndex);
