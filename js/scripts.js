@@ -49,37 +49,6 @@ function creatingUser(data) {
 //// CREATING MODAL ////
 ////////////////////////
 
-// function creatingModal() {
-//     users[0].map(person => {
-//         const modalWindow = document.createElement('div');
-//         cardsDiv.appendChild(modalWindow);
-//         modalWindow.innerHTML = `
-//
-//         <p class="closing-modal">x</p>
-//         <img src="icons/arrow.svg" id="modal-arrow-right" class="arrow modal-arrow-right" alt="arrow" width="40" height="40">
-//         <img src="icons/arrow.svg" id="modal-arrow-left" class="arrow modal-arrow-left" alt="arrow" width="40" height="40">
-//
-//         <div class="photo">
-//         <img src=${person.picture.large} alt="profile picture">
-//         </div>
-//
-//         <div class="info">
-//         <h3 class="name">${person.name.first} ${person.name.last}</h3>
-//         <p class="email">${person.email}</p>
-//         <p class="city">${person.location.city}</p>
-//         </div>
-//
-//         <div class="additional-info">
-//         <p class="phone">${person.cell}</p>
-//         <p class="adress">${person.location.street.number} ${person.location.street.name}, ${person.location.state} ${person.location.postcode}</p>
-//
-//         </div>
-//         `;
-//
-//     });
-// }
-
-
 function creatingModal() {
 
         modalWindow.innerHTML = `
