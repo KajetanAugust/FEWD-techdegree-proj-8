@@ -5,8 +5,7 @@ const userCards = document.getElementsByClassName('user');
 const modalWindow = document.getElementById('modal');
 const modalBackground = document.getElementById('modal-background');
 
-const modalArrowRight = document.getElementById('modal-arrow-right');
-const modalArrowLeft = document.getElementById('modal-arrow-left');
+
 let users;
 
 let selectedUserIndex;
@@ -135,9 +134,9 @@ searchBar.addEventListener('keyup', () => {
         modalBackground.style.display = 'initial';
         modalBackground.classList.add('visible');
         const selected = e.target;
-        const selectedClass = selected.getAttribute('class')[0];
-        selectedUserIndex = selectedClass;
+        selectedUserIndex = selected.getAttribute('class')[0];
         creatingModal();
+        switchingUsers();
         closingModal();
         console.log(selectedUserIndex);
 
@@ -152,5 +151,20 @@ searchBar.addEventListener('keyup', () => {
             modalWindow.classList.remove('visible');
             modalBackground.style.display = 'none';
             modalBackground.classList.remove('visible');
-    });
+        });
+    }
+
+    function switchingUsers() {
+        const modalArrowRight = document.getElementById('modal-arrow-right');
+        const modalArrowLeft = document.getElementById('modal-arrow-left');
+
+        modalArrowRight.addEventListener('click', () =>{
+            selectedUserIndex = (selectedUserIndex + 1);
+            creatingModal();
+        });
+
+        modalArrowLeft.addEventListener('click', () =>{
+            selectedUserIndex = (selectedUserIndex - 1);
+            creatingModal();
+        });
     }
