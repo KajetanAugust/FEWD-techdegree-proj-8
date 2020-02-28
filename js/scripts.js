@@ -104,7 +104,7 @@ function creatingModal() {
 
         </div>
         `;
-
+    switchingUsers();
 }
 
 //////////////////////////////
@@ -136,7 +136,7 @@ searchBar.addEventListener('keyup', () => {
         const selected = e.target;
         selectedUserIndex = selected.getAttribute('class')[0];
         creatingModal();
-        switchingUsers();
+
         closingModal();
         console.log(selectedUserIndex);
 
@@ -160,13 +160,13 @@ searchBar.addEventListener('keyup', () => {
         const modalArrowLeft = document.getElementById('modal-arrow-left');
 
         modalArrowRight.addEventListener('click', () =>{
-            selectedUserIndex = (selectedUserIndex + 1);
+            selectedUserIndex++;
             creatingModal();
             closingModal();
         });
 
         modalArrowLeft.addEventListener('click', () =>{
-            selectedUserIndex = (selectedUserIndex - 1);
+            selectedUserIndex--;
             creatingModal();
             closingModal();
         });
