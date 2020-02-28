@@ -11,9 +11,9 @@
 /*////////////////*/
 
 header {
-    background-color: rgb(0,102,153);
+    background-color: rgb(0, 102, 153);
     position: sticky;
-    top:0;
+    top: 0;
 }
 
 header div {
@@ -38,16 +38,16 @@ header input {
     border-radius: 5px;
     border: 2px solid white;
     padding-left: 10px;
-    background-color: rgb(0,102,153);
-    padding-top:5px;
+    background-color: rgb(0, 102, 153);
+    padding-top: 5px;
     padding-bottom: 5px;
-    color:white;
+    color: white;
 }
 
 header input::placeholder {
     padding: 2px 0;
-    margin:auto auto;
-    color:white;
+    margin: auto auto;
+    color: white;
 }
 
 /*////////////////*/
@@ -84,7 +84,7 @@ header input::placeholder {
 }
 
 .user:hover {
-    background-color: rgba(0,102,153, 0.1);
+    background-color: rgba(0, 102, 153, 0.1);
     transition: background-color 1s ease-out;
 }
 
@@ -134,11 +134,11 @@ header input::placeholder {
 }
 
 #modal {
-    position:fixed;
+    position: fixed;
     z-index: 999;
-    top:50%;
-    left:50%;
-    width:90%;
+    top: 50%;
+    left: 50%;
+    width: 90%;
     max-width: 350px;
     height: 400px;
     background-color: white;
@@ -148,13 +148,13 @@ header input::placeholder {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    padding:50px 15px;
+    padding: 50px 15px;
 }
 
-.modal-img{
+.modal-img {
     border-radius: 50%;
-    height:120px;
-    margin-bottom:20px;
+    height: 120px;
+    margin-bottom: 20px;
 }
 
 .modal-info,
@@ -164,14 +164,15 @@ header input::placeholder {
     justify-items: center;
     align-items: center;
 }
+
 .modal-info {
     border-bottom: 1px solid lightgrey;
-    width:80%;
+    width: 80%;
 }
 
 .modal-info p,
 .modal-info h3,
-.modal-additional-info p{
+.modal-additional-info p {
     margin: 5px auto;
 }
 
@@ -181,37 +182,37 @@ header input::placeholder {
 }
 
 .modal-additional-info,
-.modal-info p{
+.modal-info p {
     font-size: 0.9rem;
 }
 
 .modal-adress {
-    font-size:0.8rem;
+    font-size: 0.8rem;
 }
 
 #modal-background {
     position: fixed;
-    top:0;
-    left:0;
-    background-color: rgba(0,0,0, 0.8);
-    width:100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
     height: 100%;
 }
 
 #closing-modal {
     position: fixed;
-    top:2%;
-    left:95%;
-    margin:7px 2px;
+    top: 2%;
+    left: 95%;
+    margin: 7px 2px;
     font-size: x-large;
-    padding:1px 10px 5px 10px;
+    padding: 1px 10px 5px 10px;
     border-radius: 5px;
     transform: translate(-50%, -50%);
 }
 
 #closing-modal:hover {
-    background-color: rgba(0,102,153, 0.5);
-    color:white;
+    background-color: rgba(0, 102, 153, 0.5);
+    color: white;
 }
 
 .arrow {
@@ -223,16 +224,16 @@ header input::placeholder {
 }
 
 .arrow:hover {
-    background-color: rgba(0,102,153, 0.5);
+    background-color: rgba(0, 102, 153, 0.5);
 }
 
 .modal-arrow-right {
     left: 95%;
-    top:50%;
+    top: 50%;
     transform: translate(-50%, -50%);
 }
 
-.modal-arrow-left{
+.modal-arrow-left {
     left: 5%;
     top: 50%;
     transform: rotate(180deg) translate(50%, 50%);
@@ -303,15 +304,15 @@ header input::placeholder {
         white-space: normal;
     }
 
-    #modal{
+    #modal {
         width: 50%;
         max-width: 300px;
         height: 400px;
-        padding:50px 40px;
+        padding: 50px 40px;
     }
 
     .modal-adress {
-        font-size:0.9rem;
+        font-size: 0.9rem;
     }
 }
 
@@ -329,7 +330,7 @@ header input::placeholder {
         font-size: 0.8rem;
     }
 
-    #modal{
+    #modal {
         width: 40%;
         max-width: 300px;
     }
