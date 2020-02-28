@@ -41,10 +41,11 @@ function creatingUser(data) {
         <p class="${index} city">${person.location.city}</p>
         </div>
         `;
-        userDiv.className = index + ' user' ;
+        userDiv.className = index + ' user';
 
     });
 }
+
 ////////////////////////
 //// CREATING MODAL ////
 ////////////////////////
@@ -70,7 +71,7 @@ function creatingModal() {
         <div class="modal-additional-info">
         <p class="modal-phone">${users[0][selectedUserIndex].cell}</p>
         <p class="modal-adress">${users[0][selectedUserIndex].location.street.number} ${users[0][selectedUserIndex].location.street.name}, ${users[0][selectedUserIndex].location.state} ${users[0][selectedUserIndex].location.postcode}</p>
-        <p class="modal-birthday">Birthday: ${users[0][selectedUserIndex].dob.date.substr(8,2)}/${users[0][selectedUserIndex].dob.date.substr(5,2)}/${users[0][selectedUserIndex].dob.date.substr(0,4)}</p>
+        <p class="modal-birthday">Birthday: ${users[0][selectedUserIndex].dob.date.substr(8, 2)}/${users[0][selectedUserIndex].dob.date.substr(5, 2)}/${users[0][selectedUserIndex].dob.date.substr(0, 4)}</p>
         </div>
         `;
 
@@ -98,55 +99,55 @@ searchBar.addEventListener('keyup', () => {
 //// MODAL FUNCTIONALITY /////
 //////////////////////////////
 
-    cardsDiv.addEventListener('click', (e) => {
-        modalWindow.style.display = 'flex';
-        modalWindow.classList.add('visible');
-        modalBackground.style.display = 'initial';
-        modalBackground.classList.add('visible');
-        const selected = e.target;
-        selectedUserIndex = selected.getAttribute('class')[0];
-        creatingModal();
-        closingModal();
+cardsDiv.addEventListener('click', (e) => {
+    modalWindow.style.display = 'flex';
+    modalWindow.classList.add('visible');
+    modalBackground.style.display = 'initial';
+    modalBackground.classList.add('visible');
+    const selected = e.target;
+    selectedUserIndex = selected.getAttribute('class')[0];
+    creatingModal();
+    closingModal();
+    console.log(selectedUserIndex);
+
+});
+
+function closingModal() {
+    let modalClosingX = document.getElementById('closing-modal');
+    modalClosingX.addEventListener('click', () => {
+        modalWindow.style.display = 'none';
+        modalWindow.classList.remove('visible');
+        modalBackground.style.display = 'none';
+        modalBackground.classList.remove('visible');
+        selectedUserIndex = "";
+    });
+}
+
+function switchingUsers() {
+    const modalArrowRight = document.getElementById('modal-arrow-right');
+    const modalArrowLeft = document.getElementById('modal-arrow-left');
+
+    modalArrowRight.addEventListener('click', () => {
+        if (selectedUserIndex < users[0].length - 1) {
+            selectedUserIndex++;
+        } else {
+            selectedUserIndex = 0;
+        }
         console.log(selectedUserIndex);
 
+        creatingModal();
+        closingModal();
     });
 
-    function closingModal() {
-        let modalClosingX = document.getElementById('closing-modal');
-        modalClosingX.addEventListener('click', () => {
-            modalWindow.style.display = 'none';
-            modalWindow.classList.remove('visible');
-            modalBackground.style.display = 'none';
-            modalBackground.classList.remove('visible');
-            selectedUserIndex = "";
-        });
-    }
+    modalArrowLeft.addEventListener('click', () => {
+        if (selectedUserIndex != 0) {
+            selectedUserIndex--;
+        } else {
+            selectedUserIndex = 11;
+        }
+        console.log(selectedUserIndex);
 
-    function switchingUsers() {
-        const modalArrowRight = document.getElementById('modal-arrow-right');
-        const modalArrowLeft = document.getElementById('modal-arrow-left');
-
-        modalArrowRight.addEventListener('click', () =>{
-            if(selectedUserIndex < users[0].length -1) {
-                selectedUserIndex++;
-            }else{
-                selectedUserIndex = 0;
-            }
-            console.log(selectedUserIndex);
-
-            creatingModal();
-            closingModal();
-        });
-
-        modalArrowLeft.addEventListener('click', () =>{
-            if(selectedUserIndex != 0) {
-                selectedUserIndex--;
-            }else{
-                selectedUserIndex = 11;
-            }
-            console.log(selectedUserIndex);
-
-            creatingModal();
-            closingModal();
-        });
-    }
+        creatingModal();
+        closingModal();
+    });
+}
