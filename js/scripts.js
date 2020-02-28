@@ -151,6 +151,7 @@ searchBar.addEventListener('keyup', () => {
             modalWindow.classList.remove('visible');
             modalBackground.style.display = 'none';
             modalBackground.classList.remove('visible');
+            selectedUserIndex = "";
         });
     }
 
@@ -161,10 +162,12 @@ searchBar.addEventListener('keyup', () => {
         modalArrowRight.addEventListener('click', () =>{
             selectedUserIndex = (selectedUserIndex + 1);
             creatingModal();
+            closingModal();
         });
 
         modalArrowLeft.addEventListener('click', () =>{
             selectedUserIndex = (selectedUserIndex - 1);
             creatingModal();
+            closingModal();
         });
     }
