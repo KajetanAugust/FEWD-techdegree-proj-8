@@ -3,7 +3,7 @@ const searchBar = document.getElementById('searchBar');
 const searchPersons = document.getElementsByClassName('name');
 const userCards = document.getElementsByClassName('user');
 const modalWindow = document.getElementById('modal');
-const modalBackground = document.getElementById('modal-background');
+let modalBackground = document.getElementById('modal-background');
 
 
 let users;
@@ -121,6 +121,19 @@ function closingModal() {
         modalBackground.classList.remove('visible');
         selectedUserIndex = "";
     });
+
+
+    modalBackground.addEventListener('click', (e) => {
+        const closingTarget = e.target;
+        const closingClick = closingTarget.getAttribute('id');
+        if(closingClick != 'modal'){
+            modalWindow.style.display = 'none';
+            modalWindow.classList.remove('visible');
+            modalBackground.style.display = 'none';
+            modalBackground.classList.remove('visible');
+            selectedUserIndex = "";
+        }
+    })
 }
 
 function switchingUsers() {
