@@ -87,7 +87,7 @@ searchBar.addEventListener('keyup', () => {
 
     for (i = 0; i < searchPersons.length; i++) {
         const persons = searchPersons[i].textContent.toLowerCase();
-        if (persons.includes(searchVal) !== true) {
+        if (persons.startsWith(searchVal) !== true) {
             searchPersons[i].parentNode.parentNode.style.display = 'none';
         } else {
             searchPersons[i].parentNode.parentNode.style.display = '';
